@@ -1,0 +1,50 @@
+form {
+    $success-color: rgb(21, 97, 21);
+    $failed-color: #e74c3c;
+    .input-control {
+        position: relative;
+
+        &.success input,
+        &.success select {
+            border-color: $success-color;
+        }
+
+        &.error input,
+        &.error select {
+            border-color: $failed-color;
+        }
+
+        i {
+            visibility: hidden;
+            position: absolute;
+            top: 1rem;
+            right: 10px;
+        }
+
+        &.success i.fa-check-circle {
+            color: $success-color;
+            visibility: visible;
+        }
+
+        &.error i.fa-exclamation-circle {
+            color: $failed-color;
+            visibility: visible;
+        }
+    }
+
+    .result {
+        margin: 10px auto;
+        text-align: center;
+        width: 60%;
+        font-size: 2rem;
+        font-weight: bold;
+
+        &.success {
+            color: $success-color;
+        }
+
+        &.fail {
+            color: $failed-color;
+        }
+    }
+}
